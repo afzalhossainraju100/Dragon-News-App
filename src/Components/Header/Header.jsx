@@ -6,7 +6,7 @@ import { format } from "date-fns";
 const Header = () => {
 
   return (
-    <div className="w-11/12 mx-auto">
+    <div className="w-11/12 mx-auto mt-6">
       <div className="flex flex-col justify-center items-center p-6 space-y-2 ">
         <img src={logo} alt="Logo" />
         <p className="text-[#706f6f] text-lg font-normal leading-6">

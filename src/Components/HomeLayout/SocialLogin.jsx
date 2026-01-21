@@ -6,7 +6,7 @@ import { FaYoutube } from "react-icons/fa";
 const SocialLogin = () => {
   return (
     <div>
-      <h1 className="font-bold">Login With</h1>
+      <h1 className="font-bold text-xl">Login With</h1>
       <div className="grid grid-cols-1 mt-6 space-y-2">
         <div className="grid grid-cols-1 space-y-2">
           <button className="btn bg-black text-white border-black hover:bg-gray-800">
@@ -57,9 +57,9 @@ const SocialLogin = () => {
           </button>
         </div>
         <div>
-          <h2 className="mt-6 font-bold">Find Us On</h2>
-          <div className="grid grid-cols-1 space-y-2 mt-2">
-            <button className="btn bg-[#1A77F2] text-white border-[#005fd8] hover:bg-[#166fe5] ">
+          <h2 className="mt-6 font-bold text-xl">Find Us On</h2>
+          <div className="grid grid-cols-1 space-y-2 mt-2 ">
+            <button className="btn bg-[#1A77F2] text-white border-[#005fd8] hover:bg-[#166fe5]  ">
               <a
                 href="https://www.facebook.com/mmafzal.raju/"
                 className="flex items-center justify-center gap-6"

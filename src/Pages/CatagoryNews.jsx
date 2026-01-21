@@ -19,10 +19,10 @@ const CatagoryNews = () => {
 
   return (
     <div>
-      <h2 className="font-bold text-2xl mb-4">
+      <h2 className="font-bold text-xl mb-4">
         Dragon News Home {filteredNews.length}
       </h2>
-      <div className="space-y-4 mt-6 grid grid-cols-1 gap-6">
+      <div className="mt-6 grid grid-cols-1 gap-6">
         {filteredNews.map((news) => (
           <NewsCard key={news._id} news={news}></NewsCard>
         ))}

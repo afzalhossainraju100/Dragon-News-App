@@ -16,6 +16,10 @@ const LatestNews = () => {
             Match Highlights: Germany vs Spain — as it happened ! Match
             Highlights: Germany vs Spain as...
           </p>
+          <p className="text-[#403f3f] text-lg font-semibold leading-8 inline-block">
+            Match Highlights: Germany vs Spain — as it happened ! Match
+            Highlights: Germany vs Spain as...
+          </p>
         </div>
       </div>
     </div>
