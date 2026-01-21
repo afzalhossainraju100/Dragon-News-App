@@ -1,8 +1,11 @@
-import React from "react";
+import React, { use } from "react";
 import { Link } from "react-router-dom";
-import user from "../../assets/user.png";
+import userIcon from "../../assets/user.png";
+import { AuthContext } from "../../Context/AuthContext";
+
 
 const Navbar = () => {
+  const {user}=use(AuthContext);
   const Links = (
     <>
       <Link to="/">
@@ -18,13 +21,14 @@ const Navbar = () => {
   );
   return (
     <div className="flex w-11/12 mx-auto justify-between items-center py-4 ">
-        <div></div>
+        <div>{user?user.email:""}</div>
       <div className="list-none flex gap-4 text-lg text-[#706f6f] font-normal leading-6  justify-center items-center">
         {Links}
       </div>
       <div className="flex gap-2  items-center justify-center">
-        <img src={user} alt="" />
-        <button className="bg-[#403F3F] text-[#ffffff] px-6 py-1">Login</button>
+        <img src={userIcon} alt="" />
+        <Link to="/auth/login"><button className="bg-[#403F3F] text-[#ffffff] px-6 py-1">Login</button></Link>
+        
       </div>
     </div>
   );
