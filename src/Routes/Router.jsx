@@ -4,9 +4,10 @@ import Home from "../Pages/Home.jsx";
 import CatagoryNews from "../Pages/CatagoryNews.jsx";
 import Register from "../Pages/Register.jsx";
 import AuthLayout from "../Layouts/AuthLayout.jsx";
-import Login from "../Pages/Login.jsx";
+import Login from "../Pages/login.jsx";
 import NewsDetails from "../Pages/NewsDetails.jsx";
 import PrivateRoute from "../Provider/PrivateRoute.jsx";
+import Loading from "../Pages/Loading.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,10 +21,8 @@ const router = createBrowserRouter([
       {
         path: "category/:id",
         element: <CatagoryNews></CatagoryNews>,
-        loader: async () => {
-          const res = await fetch("/news.json");
-          return res.json();
-        },
+        loader: () => fetch("/news.json"),
+        hydrateFallbackElement: <Loading></Loading>,
       },
     ],
   },
@@ -43,10 +42,13 @@ const router = createBrowserRouter([
   },
   {
     path: "/newsDetails/:id",
-    element: (<PrivateRoute>
-      <NewsDetails></NewsDetails>
-      </PrivateRoute>),
-    loader: ()=>fetch('/news.json')
+    element: (
+      <PrivateRoute>
+        <NewsDetails></NewsDetails>
+      </PrivateRoute>
+    ),
+    loader: () => fetch("/news.json"),
+    hydrateFallbackElement: <Loading></Loading>,
   },
   {
     path: "*",

@@ -67,7 +67,7 @@ const SocialLogin = () => {
                 <FaFacebookF /> Facebook
               </a>
             </button>
-            <button className="btn  bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 text-white hover:bg-gradient-to-br">
+            <button className="btn  bg-linear-to-tr from-yellow-400 via-red-500 to-purple-600 text-white hover:bg-linear-to-br">
               <a
                 href="https://www.instagram.com/m.m.a.h.raju/"
                 className="flex items-center justify-center gap-6"

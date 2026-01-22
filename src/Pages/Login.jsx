@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
 
-
 const Login = () => {
   const [error, setError] = useState("");
   const { signInUser } = useContext(AuthContext);
@@ -60,9 +59,9 @@ const Login = () => {
                   className="input bg-[#F3F3F3] border-0 hover:shadow-md"
                   placeholder="Password"
                 />
-                {
-                  error && <p className="text-red-600 mt-2 mb-1">Something is wrong</p>
-                }
+                {error && (
+                  <p className="text-red-600 mt-2 mb-1">Something is wrong</p>
+                )}
                 <div>
                   <a className="link link-hover">Forgot password?</a>
                 </div>
@@ -78,7 +77,7 @@ const Login = () => {
             <p>
               Dont’t Have An Account ?{" "}
               <Link
-                className="bg-gradient-to-r from-[#FF8C47] to-[#F75B5F] bg-clip-text text-transparent font-bold"
+                className="bg-linear-to-r from-[#FF8C47] to-[#F75B5F] bg-clip-text text-transparent font-bold"
                 to="/auth/register"
               >
                 Register

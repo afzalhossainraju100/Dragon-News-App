@@ -37,7 +37,7 @@ const Navbar = () => {
         {Links}
       </div>
       <div className="flex gap-2  items-center justify-center">
-        <img src={userIcon} alt="" />
+        <img className="w-15 rounded-full" src={`${user?.photoURL || userIcon}`} alt="" />
         {user ? (
           <button onClick={handleLogout}
             className="bg-[#403F3F] text-[#ffffff] px-6 py-1 flex items-center gap-2"
