@@ -5,7 +5,6 @@ import NewsCard from "../Components/NewsCard/NewsCard";
 const CatagoryNews = () => {
   const { id } = useParams();
   const data = useLoaderData();
-
   const filteredNews = useMemo(() => {
     if (id === "0") {
       return data;

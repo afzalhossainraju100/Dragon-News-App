@@ -68,21 +68,15 @@ const NewsCard = ({ news }) => {
           </button>
         </div>
       </div>
-
-      {/* Title */}
       <div className="p-4">
         <h2 className="text-xl font-bold text-gray-900 leading-tight mb-4">
           {news.title}
         </h2>
-
-        {/* Thumbnail Image */}
         <img
           src={news.image_url}
           alt={news.title}
           className="w-full h-64 object-cover rounded-lg mb-4"
         />
-
-        {/* Details Section */}
         <div className="mb-4">
           <p className="text-gray-700 text-sm leading-relaxed mb-2">
             {news.details.length > 200

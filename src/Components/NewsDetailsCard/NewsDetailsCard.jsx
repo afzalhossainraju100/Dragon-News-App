@@ -26,15 +26,14 @@ const NewsDetailsCard = ({ news }) => {
 
   return (
     <div className="mt-6 rounded-lg border border-gray-200 bg-white shadow-sm overflow-hidden">
-        <div className="p-6">
-            <img
-        src={news.image_url}
-        alt={news.title}
-        className="w-full object-cover rounded-lg hover:cursor-zoom-in hover:shadow-lg transition-shadow"
-      />
+      <div className="p-6">
+        <img
+          src={news.image_url}
+          alt={news.title}
+          className="w-full object-cover rounded-lg hover:cursor-zoom-in hover:shadow-lg transition-shadow"
+        />
       </div>
       
-
       <div className="p-6">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
           {news.title}

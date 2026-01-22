@@ -30,7 +30,9 @@ const Navbar = () => {
       </Link>
     </>
   );
+
   return (
+    
     <div className="flex w-11/12 mx-auto justify-between items-center py-4 ">
       <div>{user ? user.email : ""}</div>
       <div className="list-none flex gap-4 text-lg text-[#706f6f] font-normal leading-6  justify-center items-center">

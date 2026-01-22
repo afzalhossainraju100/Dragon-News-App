@@ -3,7 +3,6 @@ import SwimmingImage from '../../assets/swimming.png';
 import Class from '../../assets/class.png';
 import playGround from '../../assets/playground.png';
 import BgPng from '../../assets/bg.png';
-
 const Qzone = () => {
     return (
       <div className="grid grid-cols-1 gap-6">
