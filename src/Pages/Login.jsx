@@ -1,9 +1,12 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
 
+
 const Login = () => {
+  const [error, setError] = useState("");
   const { signInUser } = useContext(AuthContext);
+  const location = useLocation();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
@@ -19,13 +22,12 @@ const Login = () => {
     signInUser(email, password)
       .then((result) => {
         const loggedUser = result.user;
-        console.log("Login successful:", loggedUser);
-        alert("User logged in successfully");
+        navigate(location.state || "/");
+        alert("User logged in successfully", loggedUser);
         form.reset();
-        navigate("/");
       })
       .catch((error) => {
-        alert(error.message);
+        setError(error.message);
       })
       .finally(() => {
         setLoading(false);
@@ -58,6 +60,9 @@ const Login = () => {
                   className="input bg-[#F3F3F3] border-0 hover:shadow-md"
                   placeholder="Password"
                 />
+                {
+                  error && <p className="text-red-600 mt-2 mb-1">Something is wrong</p>
+                }
                 <div>
                   <a className="link link-hover">Forgot password?</a>
                 </div>
