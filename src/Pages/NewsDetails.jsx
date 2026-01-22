@@ -20,7 +20,7 @@ const NewsDetails = () => {
         <header>
           <Header></Header>
         </header>
-        <main className='grid grid-cols-12'>
+        <main className='grid grid-cols-12 gap-6'>
           <section className="col-span-9">
             <h2 className="font-bold ">Dragon News</h2>
             <NewsDetailsCard news={news}></NewsDetailsCard>
