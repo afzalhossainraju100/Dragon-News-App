@@ -16,7 +16,6 @@ const CatagoryNews = () => {
     return newsList.filter((news) => news.category_id === parseInt(id));
     }
   }, [data, id]);
-
   return (
     <div>
       <h2 className="font-bold text-xl mb-4">
@@ -24,7 +23,7 @@ const CatagoryNews = () => {
       </h2>
       <div className="mt-6 grid grid-cols-1 gap-6">
         {filteredNews.map((news) => (
-          <NewsCard key={news._id} news={news}></NewsCard>
+          <NewsCard key={news.id} news={news}></NewsCard>
         ))}
       </div>
     </div>

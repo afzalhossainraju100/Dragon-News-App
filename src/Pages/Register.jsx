@@ -15,16 +15,15 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log({name, photoURL, email, password});
         createUser(email, password)
         .then(result=>{
             const user = result.user;
+            console.log(photoURL,name);
             setUser(user);
-            console.log(user);
             form.reset();
         })
         .catch(error=>{
-            console.error(error);
+            alert(error.message);
         });
     }
     return (
@@ -36,7 +35,7 @@ const Register = () => {
             </h1>
             <hr className="text-[#E7E7E7]" />
             <div className="card-body">
-              <form onSubmit={handleRegister} action="">
+              <form onSubmit={handleRegister} >
                 <fieldset className="fieldset">
                   <label className="label">Your Name</label>
                   <input

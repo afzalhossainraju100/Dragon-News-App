@@ -85,13 +85,13 @@ const NewsCard = ({ news }) => {
         {/* Details Section */}
         <div className="mb-4">
           <p className="text-gray-700 text-sm leading-relaxed mb-2">
-            {news.details.length > 300
-              ? `${news.details.substring(0, 300)}...`
+            {news.details.length > 200
+              ? `${news.details.substring(0, 200)}...`
               : news.details}
           </p>
-          {news.details.length > 300 && (
+          {news.details.length > 200 && (
             <Link
-              to={`/news/${news.id}`}
+              to={`/newsDetails/${news.id}`}
               className="text-orange-500 font-semibold text-sm hover:underline"
             >
               Read More
